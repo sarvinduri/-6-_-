@@ -29,6 +29,10 @@ namespace Лабораторная_работа__1_Глазкова_Труфан
         private void btnListFromFile_Click(object sender, RoutedEventArgs e)
         {
             StreamReader sr = new StreamReader(@"строки.txt", Encoding.UTF8);
+            while (!sr.EndOfStream)
+            {
+                lstInput.Items.Add(sr.ReadLine());
+            }
         }
 
         private void btnResult_Click(object sender, RoutedEventArgs e)
