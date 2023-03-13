@@ -1,0 +1,61 @@
+﻿<Page x:Class="Лабораторная_работа__1_Глазкова_Труфанова.Pages.PagePW3"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Лабораторная_работа__1_Глазкова_Труфанова.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PagePW3">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+            <StackPanel Orientation="Vertical"
+                    VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center">
+                    <TextBlock Text="X0="
+                              Style="{StaticResource StyleTextBlock}"/>
+                    <TextBox Name="txtInputX0" Margin="5" Width="100"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center">
+                    <TextBlock Text="Xk="
+                               Style="{StaticResource StyleTextBlock}"/>
+                    <TextBox Name="txtInputXk" Margin="5" Width="100"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center">
+                    <TextBlock Text="Dx="
+                               Style="{StaticResource StyleTextBlock}"/>
+                    <TextBox Name="txtInputDx" Margin="5" Width="100"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center">
+                    <TextBlock Text="D="
+                               Style="{StaticResource StyleTextBlock}"/>
+                    <TextBox Name="txtInputD" Margin="5" Width="100"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center">
+            <TextBlock Text="Результат выполнения программы:" Margin="7"/>
+            <ListBox Name="lstResult" Margin="5" Height="150" Width="300"/>
+        </StackPanel>
+        <DockPanel Grid.Row="2" 
+                   HorizontalAlignment="Center">
+            <Image Source="/Pages/пример3.png" />
+            <Button Name="btncalc" 
+                    Style="{StaticResource StyleSolveButton}"
+                    Content="Вычислить"
+                    Click="btncalc_Click"/>
+        </DockPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,74 @@
+﻿<Page x:Class="Лабораторная_работа__1_Глазкова_Труфанова.Pages.PagePW2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Лабораторная_работа__1_Глазкова_Труфанова.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="800"
+      Title="PagePW2">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+
+            <StackPanel  Orientation="Vertical"
+                     VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal" 
+                        HorizontalAlignment="Center">
+                    <TextBlock Text="Введите значение X" 
+                           Margin="5"/>
+                    <TextBox Name="txtX" Margin="5" Width="100"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" 
+                        HorizontalAlignment="Center">
+                    <TextBlock Text="Введите значение i" 
+                           Margin="5"/>
+                    <TextBox Name="txti" Margin="5" Width="100"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Vertical"
+                        VerticalAlignment="Center"
+                        Margin="5">
+                <RadioButton GroupName="Function" 
+                             Name="rbtSin"
+                             Content="Sin(x)" 
+                             IsChecked="True"
+                             Margin="10"/>
+                <RadioButton GroupName="Function" 
+                             Name="rbtCos"
+                             Content="Cos(x)"
+                             Margin="10"/>
+                <RadioButton GroupName="Function" 
+                             Name="rbtExp"
+                             Content="Exp(x)"
+                             Margin="10"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Vertical"
+                    HorizontalAlignment="Center">
+            <TextBlock Text="Результат выполнения программы:"
+                       Margin="10"/>
+            <ListBox Name="lstResult" Margin="10"
+                     Height="130"/>
+        </StackPanel>
+
+        <DockPanel Grid.Row="2" 
+                   HorizontalAlignment="Center">
+            <Button Name="btnCalc" Height="30" 
+                    Width="150"
+                    Content="Выполнить" Margin="10"
+                    Click="btnCalc_Click"/>
+            <Button Name="btnClear" Height="30" 
+                    Width="150"
+                    Content="Очистить" Margin="10"
+                    Click="btnClear_Click"/>
+        </DockPanel>
+
+    </Grid>
+</Page>
