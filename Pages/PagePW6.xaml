@@ -40,7 +40,13 @@
                     Width="150"
                     Content="Очистить" Margin="10"
                     Click="btnClear_Click"/>
-
+            <TextBlock Name="txtRezult"
+                       Width="200"
+                       Height="30"
+                       Margin="5"
+                       FontSize="14"
+                       FontFamily="Verdana"
+                       VerticalAlignment="Center"/>
         </StackPanel>
     </Grid>
 </Page>

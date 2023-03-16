@@ -33,15 +33,26 @@ namespace Лабораторная_работа__1_Глазкова_Труфан
             {
                 lstInput.Items.Add(sr.ReadLine());
             }
+            sr.Close();
         }
 
         private void btnResult_Click(object sender, RoutedEventArgs e)
         {   
-            string s = txtInputDes.Text;
-            string[] ss = s.Split(' ');
-            int cnt = ss.Count(f => Convert.ToInt32(f) % 2 == 0);
-            lstInput.Items.Add(cnt);
+            //string s = txtInputDes.Text;
+            //string[] ss = s.Split(' ');
+            //int cnt = ss.Count(f => Convert.ToInt32(f) % 2 == 0);
+            //lstInput.Items.Add(cnt);
 
+            int index = lstInput.SelectedIndex;
+            string line = lstInput.SelectedItem.ToString();
+            string[] reverseline = line.Split();
+            txtRezult.Text = String.Join(' ', reverseline.Reverse());
+
+            StreamWriter sw = new StreamWriter(@"Rezult.txt");
+            sw.WriteLine($"Номер строки: {index}");
+            sw.WriteLine($"Исходная строка: {line}");
+            sw.WriteLine($"Новая строка: {txtRezult.Text}");
+            sw.Close();
         }
 
         private void btnClear_Click(object sender, RoutedEventArgs e)
