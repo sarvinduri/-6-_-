@@ -44,5 +44,10 @@ namespace Лабораторная_работа__1_Глазкова_Труфан
         {
             ClassFrame.frmObj.Navigate(new PagePW6());
         }
+
+        private void BtnPW7_Click(object sender, RoutedEventArgs e)
+        {
+            ClassFrame.frmObj.Navigate(new PagePW7());
+        }
     }
 }
